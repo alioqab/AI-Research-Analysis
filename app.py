@@ -107,7 +107,7 @@ AI Research Analysis
 </h1>
 
 <h3 class="hero-subtitle">
-Understanding the AI Research Landscape
+Analysis of recent AI research papers submitted to arXiv.
 </h3>
 
 <p class="hero-date">
