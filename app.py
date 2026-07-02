@@ -563,16 +563,15 @@ st.markdown(
 
 st.write("")
 st.write("")
-st.write("")
 
 # =====================================================
 # 5. LARGE LANGUAGE MODELS IN AI RESEARCH
 # =====================================================
 
 llm_presence["Category"] = [
-    "Computer Vision",
+    "Computational Linguistics",
     "Machine Learning",
-    "Computational Linguistics"
+    "Computer Vision"
 ]
 
 
@@ -654,16 +653,18 @@ for col, (_, row) in zip(cols, llm_presence.iterrows()):
             }
         )
 
-st.info(
-"""
+st.info("""
 **Insight**
 
-These charts illustrate the proportion of papers **within each research field**
-that mention **Large Language Models (LLMs)**. Computational Linguistics shows
-the highest level of LLM adoption, with nearly two-thirds of its papers
-referencing LLMs. Although the percentages are lower in Machine Learning and
-Computer Vision, LLMs are still widely represented, indicating that they have
-expanded beyond natural language processing and are becoming foundational
-technologies across multiple AI disciplines.
-"""
-)
+The high concentration of LLM-related research in **Computational Linguistics**
+is expected, as the field focuses directly on language understanding and text
+generation. However, the finding that **nearly two-thirds (65.3%)** of all
+Computational Linguistics papers mention LLMs highlights just how dominant
+these models have become within the discipline.
+
+Although the proportions are lower in **Machine Learning (18.9%)** and
+**Computer Vision (12.3%)**, both fields still rank among the three largest AI
+research categories. This suggests that LLMs are no longer confined to natural
+language processing and are increasingly being integrated into broader AI
+research areas.
+""")
