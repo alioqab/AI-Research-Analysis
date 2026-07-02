@@ -205,6 +205,8 @@ st.write("")
 
 st.title("1. Overview of AI Research")
 
+max_value = category_counts["paper_count"].max()
+
 fig = px.bar(
     category_counts.head(10),
     x="paper_count",
@@ -216,22 +218,35 @@ fig = px.bar(
 
 fig.update_layout(
     template="plotly_white",
+    yaxis=dict(
+        autorange="reversed",
+        automargin=True
+    ),
+    xaxis=dict(
+        showticklabels=False,
+        range=[0, max_value * 1.06]   # Smaller padding
+    ),
     yaxis_title="",
     xaxis_title="Number of Papers",
-    yaxis=dict(autorange="reversed"),
-    xaxis=dict(showticklabels=False),
-    coloraxis_showscale=False
+    coloraxis_showscale=False,
+    margin=dict(
+        l=10,
+        r=20,
+        t=50,
+        b=10
+    )
 )
 
 fig.update_traces(
     marker_color="#B31B1B",
-    textposition="outside"
+    textposition="outside",
+    cliponaxis=False
 )
 
 st.plotly_chart(
     fig,
     use_container_width=True,
-        config={
+    config={
         "displayModeBar": False,
         "scrollZoom": False,
         "staticPlot": True
@@ -431,6 +446,8 @@ technologies and methodologies across the dataset. This provides a broader view
 of the concepts currently shaping AI research.
 """)
 
+max_value = theme_summary["Percentage_of_Papers"].max()
+
 fig = px.bar(
     theme_summary,
     x="Percentage_of_Papers",
@@ -442,28 +459,37 @@ fig = px.bar(
 fig.update_layout(
     template="plotly_white",
     yaxis=dict(
-        autorange="reversed"
+        autorange="reversed",
+        automargin=True
     ),
     xaxis=dict(
-        showticklabels=False
+        showticklabels=False,
+        range=[0, max_value * 1.08]
     ),
     xaxis_title="",
-    yaxis_title=""
+    yaxis_title="",
+    margin=dict(
+        l=10,
+        r=20,
+        t=50,
+        b=10
+    )
 )
 
 fig.update_traces(
     marker_color="#B31B1B",
     texttemplate="%{text:.1f}%",
-    textposition="outside"
+    textposition="outside",
+    cliponaxis=False
 )
 
 st.plotly_chart(
     fig,
     use_container_width=True,
     config={
-    "displayModeBar": False,
-    "scrollZoom": False,
-    "staticPlot": True
+        "displayModeBar": False,
+        "scrollZoom": False,
+        "staticPlot": True
     }
 )
 
