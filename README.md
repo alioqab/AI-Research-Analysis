@@ -8,11 +8,11 @@ The project combines **Exploratory Data Analysis (EDA)** and **Natural Language 
 
 ## Live Dashboard
 
-🔗 Streamlit: https://your-app.streamlit.app
+🔗 Streamlit: 
 
 ## Repository
 
-🔗 GitHub: https://github.com/yourusername/AI.ResearchAnalysis
+🔗 GitHub: https://github.com/alioqab/AI.ResearchAnalysis
 
 ---
 
